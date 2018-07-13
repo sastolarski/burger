@@ -6,7 +6,7 @@
             <h3>Burgers I Need to Eat</h3>
             {{#each burgers}} {{#unless this.devoured}}
             <div>
-                <form action="/burgers/{{this.id}}?_method=PUT" method="PUT">
+                <form action="/api/burgers/{{this.id}}" method="POST">
                     <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
                 </form>
             </div>
