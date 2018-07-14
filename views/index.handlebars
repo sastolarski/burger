@@ -7,7 +7,7 @@
             {{#each burgers}} 
             {{#unless this.devoured}}
             <div>
-                <form action="/api/burgers/{{this.id}}" method="POST">
+                <form action="/api/burgers/{{this.id}}" method="PUT">
                     <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
                 </form>
             </div>
@@ -31,7 +31,7 @@
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <h3>Add A Burger</h3>
-            <form action="/burgers" method="POST">
+            <form action="api/burgers" method="POST">
                 <input type="text" id="name" name="burger_name" placeholder="Name of Burger">
                 <button type="submit" class="addBurgerButton">Add Burger</button>
             </form>
