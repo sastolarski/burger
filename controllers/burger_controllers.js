@@ -18,7 +18,7 @@ router.post('/api/burgers', function(req, res) {
   ], [
     req.body.burger_name
   ], function(data) {
-    res.redirect('/');
+    es.status(200).end();
   });
 });
 
@@ -28,7 +28,7 @@ router.put('/api/burgers/:id', function(req, res) {
   burger.updateOne({
     devoured: true
   }, condition, function(data) {
-    res.redirect('/');
+    es.status(200).end();
   });
 });
 
